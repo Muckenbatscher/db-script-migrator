@@ -1,0 +1,11 @@
+@DbScriptMigrator.Api_HostAddress = http://localhost:5137
+
+GET {{DbScriptMigrator.Api_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{DbScriptMigrator.Api_HostAddress}}/todos/1
+Accept: application/json
+
+###
