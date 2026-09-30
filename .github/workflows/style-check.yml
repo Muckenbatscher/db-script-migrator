@@ -1,0 +1,21 @@
+name: .NET Style Check
+
+on:
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  style-check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v7
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v6
+      with:
+        dotnet-version: 11.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Verify Format with .editorconfig
+      run: dotnet format --verify-no-changes --verbosity detailed --no-restore

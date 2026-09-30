@@ -1,0 +1,31 @@
+version: 2
+
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: "cron"
+    cronjob: "30 22 * * *" # every day 22:30 UTC
+  open-pull-requests-limit: 10
+  assignees:
+    - Muckenbatscher
+  labels:
+    - Dependencies
+  groups:
+    mstest:
+      patterns:
+        - "MSTest*"
+    core:
+      patterns:
+        - "Microsoft*"
+        - "System*"
+
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "cron"
+    cronjob: "30 22 * * *" # every day 22:30 UTC
+  assignees:
+    - Muckenbatscher
+  labels:
+    - Dependencies
