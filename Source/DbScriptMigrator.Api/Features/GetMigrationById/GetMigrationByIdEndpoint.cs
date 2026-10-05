@@ -8,7 +8,7 @@ public class GetMigrationByIdEndpoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
     {
-        app.MapGet("/migrations/{id:guid}", Handle);
+        app.MapGet("/{id:guid}", Handle);
     }
 
     private static async Task<Results<Ok<GetMigrationByIdResponse>, NotFound>> Handle(Guid id, CancellationToken token)

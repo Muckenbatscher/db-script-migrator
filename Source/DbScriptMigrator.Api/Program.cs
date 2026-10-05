@@ -1,6 +1,5 @@
 using DbScriptMigrator.Api;
-using DbScriptMigrator.Api.Features.GetMigrationById;
-using Microsoft.AspNetCore.Http.HttpResults;
+using DbScriptMigrator.Api.Routing;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -19,6 +18,6 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.MapEndpoint<GetMigrationByIdEndpoint>();
+app.MapEndpointGroup<MigrationsEndpointGroup>();
 
 app.Run();
