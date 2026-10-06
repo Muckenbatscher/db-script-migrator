@@ -1,4 +1,5 @@
-﻿using DbScriptMigrator.Api.Features.GetMigrationById;
+﻿using DbScriptMigrator.Api.Features.GetAllMigrations;
+using DbScriptMigrator.Api.Features.GetMigrationById;
 
 namespace DbScriptMigrator.Api.Routing;
 
@@ -8,5 +9,6 @@ public class MigrationsEndpointGroup : IEndpointGroup
     {
         var group = app.MapGroup("/migrations");
         group.MapEndpoint<GetMigrationByIdEndpoint>();
+        group.MapEndpoint<GetMigrationsEndpoint>();
     }
 }

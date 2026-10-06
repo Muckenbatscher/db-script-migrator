@@ -19,5 +19,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapEndpointGroup<MigrationsEndpointGroup>();
+app.MapEndpointGroup<PerformEndpointGroup>();
 
 app.Run();
