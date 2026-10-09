@@ -8,7 +8,7 @@ public class PerformAllMigrationsEndpoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
     {
-        app.MapGet("/all", Handle);
+        app.MapPost("/all", Handle);
     }
 
     private static async Task<Results<Ok<PerformMigrationsUpToResponse>, NotFound>> Handle(CancellationToken token)

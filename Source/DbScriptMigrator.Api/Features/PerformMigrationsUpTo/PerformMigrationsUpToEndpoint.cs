@@ -8,7 +8,7 @@ public class PerformMigrationsUpToEndpoint : IEndpoint
 {
     public static void Map(IEndpointRouteBuilder app)
     {
-        app.MapGet("/up-to/{id:guid}", Handle);
+        app.MapPost("/up-to/{id:guid}", Handle);
     }
 
     private static async Task<Results<Ok<PerformMigrationsUpToResponse>, NotFound>> Handle(
