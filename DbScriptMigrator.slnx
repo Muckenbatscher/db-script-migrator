@@ -16,7 +16,7 @@
     <File Path="nuget.config" />
   </Folder>
   <Folder Name="/Source/">
-    <Project Path="DbScriptMigrator.SharedModels/DbScriptMigrator.SharedModels.csproj" Id="cdc2e422-76fb-42f9-900e-c92c17241c86" />
+    <Project Path="Source/DbScriptMigrator.SharedModels/DbScriptMigrator.SharedModels.csproj" />
     <Project Path="Source/DbScriptMigrator.Api/DbScriptMigrator.Api.csproj" />
   </Folder>
   <Folder Name="/Test/" />

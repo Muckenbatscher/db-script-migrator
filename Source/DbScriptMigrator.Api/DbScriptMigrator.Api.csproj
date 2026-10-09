@@ -10,7 +10,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\DbScriptMigrator.SharedModels\DbScriptMigrator.SharedModels.csproj" />
+    <ProjectReference Include="..\DbScriptMigrator.SharedModels\DbScriptMigrator.SharedModels.csproj" />
   </ItemGroup>
   
 </Project>
