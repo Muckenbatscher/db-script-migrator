@@ -7,7 +7,8 @@ public class MigrationsEndpointGroup : IEndpointGroup
 {
     public static void Map(IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/migrations");
+        var group = app.MapGroup("/migrations")
+            .WithTags("Listing");
         group.MapEndpoint<GetMigrationByIdEndpoint>();
         group.MapEndpoint<GetMigrationsEndpoint>();
     }

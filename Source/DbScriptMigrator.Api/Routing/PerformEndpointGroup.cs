@@ -7,7 +7,8 @@ public class PerformEndpointGroup : IEndpointGroup
 {
     public static void Map(IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/perform");
+        var group = app.MapGroup("/perform")
+            .WithTags("Performing");
         group.MapEndpoint<PerformMigrationsUpToEndpoint>();
         group.MapEndpoint<PerformAllMigrationsEndpoint>();
     }

@@ -11,7 +11,7 @@ public class PerformAllMigrationsEndpoint : IEndpoint
         app.MapPost("/all", Handle);
     }
 
-    private static async Task<Results<Ok<PerformMigrationsUpToResponse>, NotFound>> Handle(CancellationToken token)
+    private static async Task<Ok<PerformMigrationsUpToResponse>> Handle(CancellationToken token)
     {
         var migrations = GetRandomMigrationDtos();
         return TypedResults.Ok(new PerformMigrationsUpToResponse(migrations));
