@@ -10,7 +10,7 @@ updates:
   assignees:
     - Muckenbatscher
   labels:
-    - Dependencies
+    - dependencies
   groups:
     mstest:
       patterns:
@@ -28,4 +28,4 @@ updates:
   assignees:
     - Muckenbatscher
   labels:
-    - Dependencies
+    - dependencies
